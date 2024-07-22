@@ -255,8 +255,9 @@ Given that Udacity aims to reduce early cancellations (cancellations before the 
 1. Pre-Trial Enrollment Strategies
 Our goal is to encourage users with higher purchasing potential to enroll while guiding other users to access free course materials, potentially attracting more users in the long term. Based on previous experiments, we can improve the form regarding time commitment.
 
-Time Commitment and Prerequisites: The current form filters students who cannot devote enough time but does not include prerequisites for the course. Some students may spend considerable time on the course but still get frustrated due to a lack of prerequisite knowledge. Therefore, the form should also inform students about the course prerequisites.
-Redirect to Free Materials: For students who do not meet the commitment and prerequisites, the form should have a button that allows them to access free course materials directly.
+1. Time Commitment and Prerequisites: The current form filters students who cannot devote enough time but does not include prerequisites for the course. Some students may spend considerable time on the course but still get frustrated due to a lack of prerequisite knowledge. Therefore, the form should also inform students about the course prerequisites.
+   
+2. Redirect to Free Materials: For students who do not meet the commitment and prerequisites, the form should have a button that allows them to access free course materials directly.
 We can relaunch this experiment with an added metric for the click-through rate of the free course materials button. The metric is the number of unique cookies clicking the "free course material" button divided by the number of unique cookies viewing the course overview page.
 
 Success Criteria: A successful experiment would show a significant decrease in total conversion, a significant increase in net conversion rate, and a higher click-through rate for free course materials.
@@ -264,18 +265,23 @@ Success Criteria: A successful experiment would show a significant decrease in t
 2. Post-Trial Enrollment Strategies
 For users who have already enrolled, we need to improve their user experience and satisfaction to increase retention.
 
-Peer Interaction and Group Learning: Due to limited coaching resources, increasing student interaction can be effective. Students led by a tutor can form groups where they learn from and help each other, fostering a sense of competition and belonging. This can motivate students and increase retention.
-Experiment Design:
+1. Peer Interaction and Group Learning: Due to limited coaching resources, increasing student interaction can be effective. Students led by a tutor can form groups where they learn from and help each other, fostering a sense of competition and belonging. This can motivate students and increase retention.
 
-Groups Formation: Randomly assign enrolled students to either an experiment group or a control group. In the experiment group, students will be assigned to groups based on their mentors, while the control group will not have this grouping.
-Unit of Diversion: The unit of diversion will be user-ids since the experiment occurs after students enroll in the free trial, requiring account creation or sign-in.
-Hypotheses:
+#### Experiment Design:
+
+1. Groups Formation: Randomly assign enrolled students to either an experiment group or a control group. In the experiment group, students will be assigned to groups based on their mentors, while the control group will not have this grouping.
+
+2. Unit of Diversion: The unit of diversion will be user-ids since the experiment occurs after students enroll in the free trial, requiring account creation or sign-in.
+
+3. Hypotheses:
 Null Hypothesis: Setting groups will not significantly increase the number of students continuing their course after the 14-day free trial.
 Alternative Hypothesis: Setting groups will significantly increase the number of students continuing their course after the 14-day free trial.
-Metrics:
+
+4. Metrics:
 Invariant Metric: Number of user-ids, as this data can be collected before the change and is dependent on the unit of diversion.
 Evaluation Metric: Retention, measured as the number of user-ids remaining enrolled past the 14-day boundary (making at least one payment) divided by the number of user-ids completing checkout.
-Success Criteria: If there is a statistically and practically significant positive change in retention, and the sanity check is passed, assuming the resources and cost are acceptable for Udacity, we can launch this experiment.
+
+5. Success Criteria: If there is a statistically and practically significant positive change in retention, and the sanity check is passed, assuming the resources and cost are acceptable for Udacity, we can launch this experiment.
      
 
 Reference: https://github.com/baumanab/udacity_ABTesting#summary  
