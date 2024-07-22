@@ -1,6 +1,5 @@
-# BreadcrumbsData-Driven-Website-Optimization-for-Increased-Conversions - AB-Testing-Project
-## Free Trial Optimization Test 
-### At-a-glance
+# Data-Driven-Website-Optimization-for-Increased-Conversions - AB-Testing-Project
+## At-a-glance
 Imagine you're on Udacity's website, looking at a course. Currently, you have two options: dive right in with a free trial that requires your credit card, or explore the course content for free without extra perks.
 
 A change was tested. When you clicked "start free trial," you were asked how much time you could dedicate to the course each week.
@@ -8,6 +7,8 @@ A change was tested. When you clicked "start free trial," you were asked how muc
 If you said 5 hours or more, everything worked like normal. But if you said less than 5 hours, a message suggested that Udacity courses usually need a bigger time commitment. Then, you were given another option: keep the free trial, or switch to exploring the course for free.
 
 The goal was to see if this extra step helped students pick the right path and if it affected how many people signed up for the free trial.
+
+## Free Trial Optimization Test 
 
 Udacity currently offers two primary options for course engagement: an immediate free trial requiring credit card information and a free access model providing limited course content. To enhance user experience and optimize conversion rates, an experiment was conducted to qualify potential free trial enrollees based on their estimated time commitment.
 
