@@ -222,41 +222,63 @@ From charts above, we can see this experiment are less effective for gross conve
 
 ### 4.3  Results Interpretation & Recommendations
 
-1. Gross conversion: the observed gross conversion in the experiment group is around 2.06% less than the gross conversion observed in the control group. Also, we see that values in the confidence interval are congruent with a negative effect. Since these values are less than the dmin (the smallest impact size considered to be business-related), the impact seems to be statiscally and practically significant. What is more, the impact of this test is much larger on Sundays while there is nearly no impact on Thursdays.
+#### Summary of Findings
 
-2. Net conversion: Although we cannot reject the null hypothesis for this test, we see that the observed net conversion in the experiment group is around 0.49% less than the net conversion observed in the control group. Therefore, for this test, the impact is not significant neither in stastics or business issue. 
+The A/B test aimed to assess the impact of a new free trial screener on key metrics: Gross Conversion and Net Conversion. The experiment was conducted over 34 days with 50% of traffic diverted to the treatment group.
 
-Based on these results, we can assume that this change may indeed help to set clearer expectations for students upfront. However, the results show that only gross conversion is practically and statiscally significant, not both gross and net converison. So we can further assume that this experiment is effective for decreasing the free trial enrollment, but payments cannot be converted. Therefore, my recommend is not to launch, instead, we should do some further experiments.
+1. Gross Conversion: The introduction of the free trial screener led to a statistically significant and practically significant decrease in Gross Conversion. This implies that the screener effectively filtered out a portion of users who were less likely to commit to the free trial.
+2. Net Conversion: The Net Conversion, while showing a slight decrease, was not statistically or practically significant. This indicates that while the screener impacted the initial enrollment rate, its effect on long-term retention was negligible.
 
+#### Interpretation
+The results suggest that the free trial screener is successful in setting clearer expectations upfront, aligning with the initial hypothesis. By filtering out users who are less committed, it could potentially improve the overall student experience and reduce the burden on coaches.
 
-## 5. Follow-Up Experiment: How to Reduce Early Cancellations
+However, the lack of a significant impact on Net Conversion indicates that the screener does not negatively affect the likelihood of students continuing past the free trial. This is a positive outcome as it demonstrates that the screener is not deterring genuinely interested students.
 
-Given that Udacity want to reduce early cancellation (early cancellation is the cancellation before the end of the 14-day free trial period that triggered the payment), we can consider from two ascpects: before the free trial enrollment and after the enrollment.
+#### Recommendations
 
-1. Before the free trial enrollment, our goal is to let users with more purchasing potential enroll meanwhile guide other users to access free course materials, which may attract more potential users in the long term. Therefore, based on the experiment we've done, this time we can improve the form regarding the time commitment. Firstly, this form is only used to filter students who cannot devote enough time, however, it does not contain prerequisites for the course. Some students may spend a fairly long time on this course but they are still frustrated due to lack of prerequisite knowledge. Therefore, we should also notice students the prerequisites for the course on the form. Secondly, we also need to convert non-purchasing potential student to obtain the free course materials. So if some students do not meet the commitment and prerequisites, the form should have a button that allows students to directly convert to access free course materials.  
-   Therefore, we could launch this experiment again, but add the click through probability for the free course material as variant metric. (free course material click through probability: number of unique cookies to click the "free course material" button divided by number of unique cookies to view the course overview page).  
-   A successful experiment would be a significant decrease in the total conversion and a significant increase in the net conversion rate and the free course materials click through probability.  
-    
-    
-2. For the users who have already enrolled, it is necessary to improve their user experience and make them more satisfied, so that they are willing to stay. Due to the limited coaching resources, I think the interaction between students can be increased. An effective method might be to have students led by a tutor form a group. Students can learn from and help each other, and it may also have a potential sense of competition. In this way, the group can make students more motivated and have a sense of belonging, which may lead to retention.  
+Based on the findings, the following recommendations are made:
 
-     - The experiment design:
-       For the students who have enrolled, randomly assgin them to experiment group and control group. In the experiment group, students will be assigned to the groups according to their mentors. And in the control group, students will not be assigned.
-         
-     - Unit of Diversion: the unit of diversion will be user-ids, because this experiment will occur after students enrolling the free trial where they should create accounts or sign in.
+1. Implement the Free Trial Screener: Given the positive impact on Gross Conversion and the neutral effect on Net Conversion, it is recommended to fully implement the free trial screener. This change has the potential to improve student satisfaction and resource allocation.
+2. Monitor Key Metrics: Continuously track Gross Conversion, Net Conversion, and other relevant metrics post-implementation to assess the long-term impact of the screener.
+3. Explore Additional Refinements: Consider further refinements to the screener based on user feedback and performance data. For instance, testing different question formats or lengths could optimize its effectiveness.
+4. Investigate Seasonal Patterns: The observed weekly fluctuations in conversion rates suggest potential seasonal effects. Conducting further analysis to understand these patterns can inform future experimentation and optimization efforts.
+5. Consider Additional Metrics: While Gross Conversion and Net Conversion provide valuable insights, exploring other metrics such as time-to-completion or course completion rates could offer a more comprehensive understanding of the screener's impact.
+
+### 4.4 Conclusion
+
+The A/B test results demonstrate that the introduction of a free trial screener is a positive change for Udacity. By improving student quality and potentially enhancing the overall learning experience, the screener aligns with the platform's goals. Continuous monitoring and optimization will be crucial to maximizing the benefits of this change.
+
+## 5. Follow-Up Experiment: Strategies to Reduce Early Cancellations
+
+Given that Udacity aims to reduce early cancellations (cancellations before the end of the 14-day free trial period that trigger payment), we can consider two aspects: before the free trial enrollment and after the enrollment.
+
+1. Pre-Trial Enrollment Strategies
+Our goal is to encourage users with higher purchasing potential to enroll while guiding other users to access free course materials, potentially attracting more users in the long term. Based on previous experiments, we can improve the form regarding time commitment.
+
+Time Commitment and Prerequisites: The current form filters students who cannot devote enough time but does not include prerequisites for the course. Some students may spend considerable time on the course but still get frustrated due to a lack of prerequisite knowledge. Therefore, the form should also inform students about the course prerequisites.
+Redirect to Free Materials: For students who do not meet the commitment and prerequisites, the form should have a button that allows them to access free course materials directly.
+We can relaunch this experiment with an added metric for the click-through rate of the free course materials button. The metric is the number of unique cookies clicking the "free course material" button divided by the number of unique cookies viewing the course overview page.
+
+Success Criteria: A successful experiment would show a significant decrease in total conversion, a significant increase in net conversion rate, and a higher click-through rate for free course materials.
+
+2. Post-Trial Enrollment Strategies
+For users who have already enrolled, we need to improve their user experience and satisfaction to increase retention.
+
+Peer Interaction and Group Learning: Due to limited coaching resources, increasing student interaction can be effective. Students led by a tutor can form groups where they learn from and help each other, fostering a sense of competition and belonging. This can motivate students and increase retention.
+Experiment Design:
+
+Groups Formation: Randomly assign enrolled students to either an experiment group or a control group. In the experiment group, students will be assigned to groups based on their mentors, while the control group will not have this grouping.
+Unit of Diversion: The unit of diversion will be user-ids since the experiment occurs after students enroll in the free trial, requiring account creation or sign-in.
+Hypotheses:
+Null Hypothesis: Setting groups will not significantly increase the number of students continuing their course after the 14-day free trial.
+Alternative Hypothesis: Setting groups will significantly increase the number of students continuing their course after the 14-day free trial.
+Metrics:
+Invariant Metric: Number of user-ids, as this data can be collected before the change and is dependent on the unit of diversion.
+Evaluation Metric: Retention, measured as the number of user-ids remaining enrolled past the 14-day boundary (making at least one payment) divided by the number of user-ids completing checkout.
+Success Criteria: If there is a statistically and practically significant positive change in retention, and the sanity check is passed, assuming the resources and cost are acceptable for Udacity, we can launch this experiment.
      
-     - Hypothesis:
-       Null Hypotheis: Setting groups will not increase significantly the number of students who will continue their course after 14 days free trial.
-       Alternative Hypothesis: Setting groups will increase significantly the number of students who will continue their course after 14 days free trial.
-       
-     - Invariant Metrics: the invariant metric should be the number of user-ids as it is the data that we can collect before the change and it is dependent on the unit of diversion for this experiment.
-     
-     - Evaluation Metrics: the evaluation metric will be rentention. Retention is the number of user-ids to remain enrolled past the 14-day boundary (and thus make at least one payment) divided by number of user-ids to complete checkout. 
-     
-   If a statistically and practically significant positive change in retention is observed, given the sanity check is passed, assuming the resources and cost is acceptable for Udacity, then we can launch this experiment.
-     
 
-Credits to the reference: https://github.com/baumanab/udacity_ABTesting#summary  
-                          https://www.kaggle.com/mariusmesserschmied/udacity-a-b-testing-final-course-project/comments
+Reference: https://github.com/baumanab/udacity_ABTesting#summary  
+           https://www.kaggle.com/mariusmesserschmied/udacity-a-b-testing-final-course-project/comments
    
    
